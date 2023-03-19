@@ -17,6 +17,12 @@ const BrandsWrapper = styled(Box)(({theme}) => ({
     alignItems: 'center',
     '& > img' : {
         height: '60px'
+    },
+    [theme.breakpoints.down('md')]: {
+        flexDirection: 'column',
+        '& > img' : {
+            marginBottom: '1rem',
+        }
     }
 }))
 
