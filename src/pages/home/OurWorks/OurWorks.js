@@ -5,6 +5,7 @@ import Tab from '@mui/material/Tab';
 import SectionTitle from '../../../components/SectionTitle/SectionTitle'
 import IconButton from '@mui/material/IconButton';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import CreativeCard from '../../../components/CreativeCard/CreativeCard';
 
 function OurWorks() {
     const [value, setValue] = React.useState(0);
@@ -69,6 +70,11 @@ function OurWorks() {
                     </Box>
                 </Box>
 
+            </Box>
+
+            {/* Creative part */}
+            <Box>
+                <CreativeCard />
             </Box>
         </Box>
     )
