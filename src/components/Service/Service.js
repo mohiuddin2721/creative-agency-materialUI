@@ -10,7 +10,7 @@ function Service({ image }) {
             sx={{
                 maxWidth: 345,
                 boxShadow: 'none',
-                pt: 2,
+                pt: 4,
                 mx: 'auto',
                 '&:hover': {
                     boxShadow: '0 0 10px 0 rgba(0, 0, 0, 0.1)'
