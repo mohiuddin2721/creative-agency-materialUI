@@ -7,13 +7,13 @@ import { Box } from '@mui/system';
 import AddIcon from '@mui/icons-material/Add';
 import { useTheme } from '@emotion/react';
 
-function CreativeCard() {
+function CreativeCard({ image }) {
     const theme = useTheme();
     return (
-        <Card sx={{ maxWidth: 345, p: 2, borderRadius: '10px' }}>
+        <Card sx={{ maxWidth: 345, p: 2, borderRadius: '10px', minWidth: '45px' }}>
             <CardMedia
                 sx={{ height: 190 }}
-                image="/static/images/cards/contemplative-reptile.jpg"
+                image={image}
                 title="green iguana"
                 style={{
                     borderRadius: '10px'
