@@ -2,6 +2,7 @@ import React from 'react';
 import Branding from './Branding/Branding';
 import Brands from './Brands/Brands';
 import ClientFeedback from './ClientFeedback/ClientFeedback';
+import Contact from './Contact/Contact';
 import Faq from './Faq/Faq';
 import OurWorks from './OurWorks/OurWorks';
 import Services from './Services/Services';
@@ -13,8 +14,9 @@ const Home = () => {
             <Brands />
             <Services />
             <OurWorks />
-            <Faq />
             <ClientFeedback />
+            <Faq />
+            <Contact />
         </div>
     );
 };

@@ -7,7 +7,7 @@ import { FeedbackData } from '../FeedbackData/FeedbackData';
 function ClientFeedback() {
     return (
         <Box sx={{
-            mb: 6,
+            my: 10,
         }}>
             <Box sx={{
                 mb: 4,
