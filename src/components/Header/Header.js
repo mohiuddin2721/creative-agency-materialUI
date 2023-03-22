@@ -14,10 +14,25 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
+import Link from '@mui/material/Link';
 
 
 const drawerWidth = 240;
 const navItems = ['Home', 'About', 'Contact'];
+// const navItems = [
+//   {
+//     field: 'Home',
+//     to: '/home',
+//   },
+//   {
+//     field: 'About',
+//     to: '/about',
+//   },
+//   {
+//     field: 'Contact',
+//     to: '/contact',
+//   },
+// ];
 
 export default function Header(props) {
   const { window } = props;
@@ -94,7 +109,14 @@ export default function Header(props) {
               <Button sx={{
                 bgcolor: 'primary.green'
               }}>
-                Login
+                <Link href="/signIn" variant="body2" sx={{
+                  textDecoration: 'none',
+                  cursor: 'pointer',
+                  color: '#fff'
+                }}>
+                  {"Login"}
+                </Link>
+
               </Button>
             </Box>
 

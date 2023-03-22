@@ -5,6 +5,8 @@ import Home from './pages/home/Home';
 import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider } from '@mui/material/styles';
 import { theme } from './theme/theme';
+import SignInSide from './components/LoginPage/SignInSide';
+import SignupPage from './components/SignupPage/SignupPage';
 
 const router = createBrowserRouter([
   {
@@ -14,6 +16,14 @@ const router = createBrowserRouter([
       {
         element: <Home />,
         path: '/',
+      },
+      {
+        element: <SignInSide />,
+        path: '/signIn',
+      },
+      {
+        element: <SignupPage />,
+        path: '/signUp',
       },
     ]
   },
