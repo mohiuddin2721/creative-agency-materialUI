@@ -1,8 +1,8 @@
-import React from 'react'
-import { Box, Grid } from '@mui/material'
+import React from 'react';
+import { Box, Grid } from '@mui/material';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
-import SectionTitle from '../../../components/SectionTitle/SectionTitle'
+import SectionTitle from '../../../components/SectionTitle/SectionTitle';
 import IconButton from '@mui/material/IconButton';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import CreativeCard from '../../../components/CreativeCard/CreativeCard';
@@ -19,64 +19,85 @@ function OurWorks() {
     return (
         <Box sx={{ my: 5 }}>
             {/* Heading section */}
-            <Box sx={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'space-between',
+            <Grid container sx={{
+                // display: 'flex',
+                // alignItems: 'center',
+                // justifyContent: 'space-between',
                 mb: 3,
             }}>
-                <SectionTitle title='Here are some of' colored='our works' sx={{
-                    textAlign: 'left',
-                }} />
-                <Box sx={{
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    alignItems: 'center'
-                }}>
-                    <Tabs value={value} onChange={handleChange} centered sx={{
-                        '& .MuiTabs-indicator': {
-                            display: 'none'
-                        },
-                        '& .Mui-selected': {
-                            color: 'primary.green',
-                            fontWeight: 'bold',
-                        },
-                        '& .MuiButtonBase-root': {
-                            textTransform: 'capitalize',
-                        }
+                <Grid item xs={12} sm={12} md={6}>
+                    <SectionTitle title='Here are some of' colored='our works' sx={{
+                        textAlign: 'left',
+                    }} />
+                </Grid>
+                <Grid
+                    item xs={12} sm={12} md={6}
+                    sx={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center'
                     }}>
-                        <Tab label="Item One" />
-                        <Tab label="Item Two" />
-                        <Tab label="Item Three" />
-                    </Tabs>
-                    <Box>
-                        <IconButton sx={{
-                            // border: '1px solid #959EAD',
-                            border: theme => `1px solid ${value === 0 ? '#959EAD' : theme.palette.primary.main}`,
-                            mr: 2,
-                            color: 'primary.main',
-                        }}
-                            onClick={() => setValue(value - 1)}
-                            disabled={value === 0}
-                        >
-                            <ArrowBackIcon />
-                        </IconButton>
-                        <IconButton sx={{
-                            // border: '1px solid #959EAD'
-                            border: theme => `1px solid ${value === 2 ? '#959EAD' : theme.palette.primary.main}`,
-                            
-                        }}
-                            onClick={() => setValue(value + 1)}
-                            disabled={value === 2}
-                        >
-                            <ArrowBackIcon sx={{
-                                transform: 'rotate(180deg)'
-                            }} />
-                        </IconButton>
-                    </Box>
-                </Box>
+                    <Grid container>
+                        <Grid item xs={12} sm={12} md={6}
+                            sx={{
+                                display: 'flex',
+                                justifyContent: 'center',
+                                alignItems: 'center'
+                            }}>
+                            <Tabs value={value} onChange={handleChange} centered sx={{
+                                '& .MuiTabs-indicator': {
+                                    display: 'none'
+                                },
+                                '& .Mui-selected': {
+                                    color: 'primary.green',
+                                    fontWeight: 'bold',
+                                },
+                                '& .MuiButtonBase-root': {
+                                    textTransform: 'capitalize',
+                                }
+                            }}>
+                                <Tab label="All" />
+                                <Tab label="Web design" />
+                                <Tab label="Mobile app" />
+                            </Tabs>
+                        </Grid>
+                        <Grid item xs={12} sm={12} md={6}
+                            sx={{
+                                display: 'flex',
+                                justifyContent: 'center',
+                                alignItems: 'center'
+                            }}>
+                            <IconButton sx={{
+                                // border: '1px solid #959EAD',
+                                border: theme => `1px solid ${value === 0 ? '#959EAD' : theme.palette.primary.main}`,
+                                mr: 2,
+                                color: 'primary.main',
+                            }}
+                                onClick={() => setValue(value - 1)}
+                                disabled={value === 0}
+                            >
+                                <ArrowBackIcon />
+                            </IconButton>
+                            <IconButton sx={{
+                                // border: '1px solid #959EAD'
+                                border: theme => `1px solid ${value === 2 ? '#959EAD' : theme.palette.primary.main}`,
 
-            </Box>
+                            }}
+                                onClick={() => setValue(value + 1)}
+                                disabled={value === 2}
+                            >
+                                <ArrowBackIcon sx={{
+                                    transform: 'rotate(180deg)'
+                                }} />
+                            </IconButton>
+                        </Grid>
+                    </Grid>
+                    {/* 
+                    <Box>
+                        
+                    </Box> */}
+                </Grid>
+            </Grid>
 
             {/* Creative part */}
             <Grid container spacing={3} justifyContent='center'>
