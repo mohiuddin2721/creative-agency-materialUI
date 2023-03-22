@@ -17,7 +17,7 @@ function OurWorks() {
         setValue(newValue);
     };
     return (
-        <Box sx={{ my: 5 }}>
+        <Box sx={{ my: 5 }} id='service'>
             {/* Heading section */}
             <Grid container sx={{
                 // display: 'flex',

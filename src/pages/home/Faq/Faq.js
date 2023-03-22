@@ -5,7 +5,7 @@ import SectionTitle from '../../../components/SectionTitle/SectionTitle'
 
 function Faq() {
     return (
-        <Box sx={{
+        <Box id='faq' sx={{
             mb: 8,
             display: 'flex',
             flexDirection: 'column',

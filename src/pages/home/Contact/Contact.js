@@ -4,7 +4,7 @@ import React from 'react'
 
 function Contact() {
     return (
-        <Box>
+        <Box id='contact'>
             <Grid container spacing={2}
                 sx={{
                     backgroundColor: 'rgba(122, 178, 89, 0.15)',
@@ -42,6 +42,7 @@ function Contact() {
                     }}>
                         <TextField
                             id="outlined-multiline-flexible"
+                            label="Email Address"
                             sx={{
                                 width: '90%',
                                 backgroundColor: '#ffff',
@@ -49,6 +50,7 @@ function Contact() {
                         />
                         <TextField
                             id="outlined-multiline-flexible"
+                            label="Address"
                             sx={{
                                 width: '90%',
                                 mt: 2,
