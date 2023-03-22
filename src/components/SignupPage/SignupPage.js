@@ -18,6 +18,7 @@ export default function SignupPage() {
         event.preventDefault();
         const data = new FormData(event.currentTarget);
         console.log({
+            name: data.get('name'),
             email: data.get('email'),
             password: data.get('password'),
         });
@@ -39,6 +40,7 @@ export default function SignupPage() {
                             t.palette.mode === 'light' ? t.palette.grey[50] : t.palette.grey[900],
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
+                        transform: 'rotateY(180deg)',
                     }}
                 />
                 <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
@@ -51,7 +53,7 @@ export default function SignupPage() {
                             alignItems: 'center',
                         }}
                     >
-                        <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+                        <Avatar sx={{ m: 1, bgcolor: '#7AB259' }}>
                             <LockOutlinedIcon />
                         </Avatar>
                         <Typography component="h1" variant="h5">
@@ -76,7 +78,6 @@ export default function SignupPage() {
                                 label="Email Address"
                                 name="email"
                                 autoComplete="email"
-                                autoFocus
                             />
                             <TextField
                                 margin="normal"

@@ -8,7 +8,7 @@ import IconButton from '@mui/material/IconButton';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
+// import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
@@ -18,21 +18,24 @@ import Link from '@mui/material/Link';
 
 
 const drawerWidth = 240;
-const navItems = ['Home', 'About', 'Contact'];
-// const navItems = [
-//   {
-//     field: 'Home',
-//     to: '/home',
-//   },
-//   {
-//     field: 'About',
-//     to: '/about',
-//   },
-//   {
-//     field: 'Contact',
-//     to: '/contact',
-//   },
-// ];
+const navItems = [
+  {
+    field: 'Home',
+    to: '/',
+  },
+  {
+    field: 'Service',
+    to: '#service',
+  },
+  {
+    field: 'FAQ',
+    to: '#faq',
+  },
+  {
+    field: 'Contact',
+    to: '#contact',
+  },
+];
 
 export default function Header(props) {
   const { window } = props;
@@ -45,14 +48,19 @@ export default function Header(props) {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
+        USER
       </Typography>
       <Divider />
       <List>
-        {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
+        {navItems?.map((item, i) => (
+          <ListItem key={i} disablePadding>
             <ListItemButton sx={{ textAlign: 'center' }}>
-              <ListItemText primary={item} />
+              <Link href={item?.to} variant="body2" sx={{
+                textDecoration: 'none',
+                cursor: 'pointer',
+              }}>
+                {item?.field}
+              </Link>
             </ListItemButton>
           </ListItem>
         ))}
@@ -101,9 +109,15 @@ export default function Header(props) {
               }} />
             </Box>
             <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-              {navItems.map((item) => (
-                <Button variant='text' key={item} sx={{ color: 'primary.main' }}>
-                  {item}
+              {navItems?.map((item, i) => (
+                <Button variant='text' key={i} sx={{ color: 'primary.main' }}>
+
+                  <Link href={item?.to} variant="body2" sx={{
+                    textDecoration: 'none',
+                    cursor: 'pointer',
+                  }}>
+                    {item?.field}
+                  </Link>
                 </Button>
               ))}
               <Button sx={{
