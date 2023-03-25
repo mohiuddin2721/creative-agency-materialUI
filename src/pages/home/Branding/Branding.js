@@ -29,7 +29,11 @@ function Branding() {
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora hic modi, in ea repellat accusamus.
                 </Typography>
                 <Button sx={{
-                    width: '50%'
+                    width: {
+                        xs: '60%',
+                        sm: '60%',
+                        md: '50%',
+                    }
                 }}>Hire Us</Button>
             </Stack>
             <Box sx={{

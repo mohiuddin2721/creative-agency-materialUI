@@ -4,7 +4,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 
-function Service({ image }) {
+function Service({ data }) {
     return (
         <Card
             sx={{
@@ -19,7 +19,7 @@ function Service({ image }) {
             <CardMedia
                 component='img'
                 height='140'
-                image={image}
+                image={data?.image}
                 alt="green iguana"
                 sx={{ width: 'auto', mx: 'auto' }}
             />
@@ -31,11 +31,10 @@ function Service({ image }) {
                         fontWeight: 'bold'
                     }}
                 >
-                    Web & Mobile design
+                    {data?.title}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                    We craft stunning and amazing web UI, using a well drrafted UX to
-                    fit your product.
+                    {data?.description}
                 </Typography>
             </CardContent>
         </Card>
