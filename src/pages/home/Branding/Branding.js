@@ -1,6 +1,6 @@
 import React from 'react'
 import { styled } from '@mui/material/styles';
-import { Box, Button, Grid, Stack, Typography } from '@mui/material';
+import { Box, Button, Stack, Typography } from '@mui/material';
 
 const BrandingWrapper = styled(Box)(({ theme }) => ({
     height: '70vh',
