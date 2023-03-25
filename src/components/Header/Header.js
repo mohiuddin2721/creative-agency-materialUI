@@ -130,7 +130,6 @@ export default function Header(props) {
                 }}>
                   {"Login"}
                 </Link>
-
               </Button>
             </Box>
 

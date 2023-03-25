@@ -10,7 +10,13 @@ function OurTeam() {
   return (
     <Box>
       <SectionTitle colored='OUR TEAM' sx={{ fontSize: '17px' }} />
-      <SectionTitle title='Trust the professionals' />
+      <SectionTitle title='Trust the professionals' sx={{
+        fontSize: {
+          xs: '25px',
+          sm: '25px',
+          md: '34px',
+        },
+      }} />
       <Box sx={{
         width: {
           xs: 'auto',
