@@ -18,7 +18,12 @@ function OurTeam() {
           md: 500,
           lg: 800,
         },
-        height: 450,
+        height: {
+          xs: 270,
+          sm: 270,
+          md: 350,
+          lg: 450,
+        },
         overflowY: 'scroll',
         overflowX: 'hidden',
         mx: 'auto',
