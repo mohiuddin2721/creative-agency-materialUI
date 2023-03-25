@@ -1,9 +1,9 @@
-import { Box, Button, Grid, Typography } from '@mui/material'
-import React from 'react'
+import React from 'react';
+import { Box, Button, Typography } from '@mui/material';
 import SectionTitle from '../../../components/SectionTitle/SectionTitle';
 import EmailIcon from '@mui/icons-material/Email';
-import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import { specialData } from './SpecialtyData';
+import OurSpecialtyCard from './OurSpecialtyCard';
 
 function OurSpecialty() {
   return (
@@ -50,28 +50,7 @@ function OurSpecialty() {
       <Box sx={{ mb: 10 }}>
         {
           specialData?.map((item, i) => (
-            <Grid container key={i} direction={`${(i / 2 === 0.5) ? 'row-reverse' : 'row'}`}>
-              <Grid items xs={12} sm={12} md={6} sx={{
-                display: 'flex',
-                alignItems: 'center',
-              }}>
-                <Box sx={{}}>
-                  <Typography sx={{ fontSize: '25px', fontWeight: '600' }}>{item?.title}</Typography>
-                  <Typography>{item?.description}</Typography>
-                  <Button variant='text' sx={{
-                    textTransform: 'capitalize',
-                    color: 'primary.green',
-                  }}>
-                    Learn more <ArrowRightAltIcon sx={{ ml: 2 }} />
-                  </Button>
-                </Box>
-              </Grid>
-              <Grid items xs={12} sm={12} md={6}>
-                <img src={item?.image} alt="" style={{
-                  width: '100%',
-                }} />
-              </Grid>
-            </Grid>
+            <OurSpecialtyCard key={i} item={item} i={i} />
           ))
         }
       </Box>
