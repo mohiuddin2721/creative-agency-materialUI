@@ -8,12 +8,12 @@ function Contact() {
         <Box id='contact' sx={{
             backgroundColor: 'rgba(122, 178, 89, 0.15)',
         }}>
-            
-            <SectionTitle title='Let us handle your project,' colored='professionally.' sx={{pt: 6}} />
+
+            <SectionTitle title='Let us handle your project,' colored='professionally.' sx={{ pt: 6 }} />
             <Typography sx={{
                 fontSize: '15px',
                 textAlign: 'center',
-                
+
             }}>
                 With well written codes, we build amazing apps for all platforms, mobile and web apps in general.
             </Typography>
@@ -29,7 +29,9 @@ function Contact() {
                     mx: 'auto',
                 }}>
                 <Grid item xs={12} sm={12} md={6}>
-                    <img src="https://i.ibb.co/fnnsqjN/4220713-removebg-preview.png" alt="" />
+                    <img src="https://i.ibb.co/fnnsqjN/4220713-removebg-preview.png" alt="" style={{
+                        width: '100%',
+                    }} />
                 </Grid>
                 <Grid item xs={12} sm={12} md={6}>
                     <FormControl sx={{
