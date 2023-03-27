@@ -15,28 +15,17 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
+import {
+  HeaderAppBarSx,
+  HeaderDrawerSx,
+  HeaderIconButtonSx,
+  HeaderLinkSignInSx,
+  HeaderLink_2_SignInSx,
+  HeaderLink_3_SignInSx,
+  navItems
+} from '../StyleComponent/StyleComponent';
 
-
-const drawerWidth = 240;
-const navItems = [
-  {
-    field: 'Home',
-    to: '/',
-  },
-  {
-    field: 'Service',
-    to: '#service',
-  },
-  {
-    field: 'FAQ',
-    to: '#faq',
-  },
-  {
-    field: 'Contact',
-    to: '#contact',
-  },
-];
-
+// const drawerWidth = 240;
 export default function Header(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -64,6 +53,9 @@ export default function Header(props) {
             </ListItemButton>
           </ListItem>
         ))}
+        <Link href="/signIn" variant="body2" sx={HeaderLinkSignInSx}>
+          {"Login"}
+        </Link>
       </List>
     </Box>
   );
@@ -73,12 +65,7 @@ export default function Header(props) {
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      <AppBar component="nav" sx={{
-        background: 'transparent',
-        boxShadow: 'none',
-        mt: 2,
-        position: 'static',
-      }}>
+      <AppBar component="nav" sx={HeaderAppBarSx}>
         <Container>
           <Toolbar>
             <IconButton
@@ -86,48 +73,23 @@ export default function Header(props) {
               aria-label="open drawer"
               edge="start"
               onClick={handleDrawerToggle}
-              sx={{
-                mr: 2, display: { sm: 'none' }, backgroundColor: 'primary.main',
-                '&:hover': {
-                  backgroundColor: 'primary.main'
-                }
-              }}
+              sx={HeaderIconButtonSx}
             >
               <MenuIcon />
             </IconButton>
-            {/* <Typography
-              variant="h6"
-              component="div"
-              sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
-            >
-              MUI
-            </Typography> */}
-            <Box
-              sx={{ flexGrow: 1, display: { xs: 'flex', sm: 'block' } }}>
-              <img src="https://i.ibb.co/JsvBDwD/logo.png" alt="" style={{
-                width: '150px'
-              }} />
+            <Box sx={{ flexGrow: 1, display: { xs: 'flex', sm: 'block' } }}>
+              <img src="https://i.ibb.co/JsvBDwD/logo.png" alt="" style={{ width: '150px' }} />
             </Box>
             <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
               {navItems?.map((item, i) => (
                 <Button variant='text' key={i} sx={{ color: 'primary.main' }}>
-
-                  <Link href={item?.to} variant="body2" sx={{
-                    textDecoration: 'none',
-                    cursor: 'pointer',
-                  }}>
+                  <Link href={item?.to} variant="body2" sx={HeaderLink_2_SignInSx}>
                     {item?.field}
                   </Link>
                 </Button>
               ))}
-              <Button sx={{
-                bgcolor: 'primary.green'
-              }}>
-                <Link href="/signIn" variant="body2" sx={{
-                  textDecoration: 'none',
-                  cursor: 'pointer',
-                  color: '#fff'
-                }}>
+              <Button sx={{ bgcolor: 'primary.green' }}>
+                <Link href="/signIn" variant="body2" sx={HeaderLink_3_SignInSx}>
                   {"Login"}
                 </Link>
               </Button>
@@ -145,10 +107,7 @@ export default function Header(props) {
           ModalProps={{
             keepMounted: true, // Better open performance on mobile.
           }}
-          sx={{
-            display: { xs: 'block', sm: 'none' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
-          }}
+          sx={HeaderDrawerSx}
         >
           {drawer}
         </Drawer>

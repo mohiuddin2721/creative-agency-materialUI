@@ -10,6 +10,7 @@ import Grid from '@mui/material/Grid';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { signUpBoxSx, signUpGridSx } from '../StyleComponent/StyleComponent';
 
 const theme = createTheme();
 
@@ -26,32 +27,18 @@ export default function SignupPage() {
 
     return (
         <ThemeProvider theme={theme}>
-            <Grid container component="main"  sx={{ height: '80vh', my: 5 }}>
+            <Grid container component="main" sx={{ height: '80vh', my: 5 }}>
                 <CssBaseline />
                 <Grid
                     item
                     xs={false}
                     sm={4}
                     md={7}
-                    sx={{
-                        backgroundImage: 'url(https://i.ibb.co/sPXVMbC/Frame.png)',
-                        backgroundRepeat: 'no-repeat',
-                        backgroundColor: (t) =>
-                            t.palette.mode === 'light' ? t.palette.grey[50] : t.palette.grey[900],
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center',
-                        transform: 'rotateY(180deg)',
-                    }}
+                    sx={signUpGridSx}
                 />
                 <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
                     <Box
-                        sx={{
-                            my: 8,
-                            mx: 4,
-                            display: 'flex',
-                            flexDirection: 'column',
-                            alignItems: 'center',
-                        }}
+                        sx={signUpBoxSx}
                     >
                         <Avatar sx={{ m: 1, bgcolor: '#7AB259' }}>
                             <LockOutlinedIcon />
@@ -104,7 +91,7 @@ export default function SignupPage() {
                                     </Link>
                                 </Grid>
                                 <Grid item>
-                                <Link href="/signIn" variant="body2" sx={{
+                                    <Link href="/signIn" variant="body2" sx={{
                                         textDecoration: 'none',
                                         cursor: 'pointer',
                                     }}>
