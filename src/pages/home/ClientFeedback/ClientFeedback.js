@@ -18,7 +18,7 @@ function ClientFeedback() {
             <Grid container spacing={2}>
                 {
                     FeedbackData.map((data, i) => (
-                        <Grid item xs={12} sm={6} md={4}>
+                        <Grid item key={i} xs={12} sm={6} md={4}>
                             <Feedback key={i} data={data} />
                         </Grid>
                     ))

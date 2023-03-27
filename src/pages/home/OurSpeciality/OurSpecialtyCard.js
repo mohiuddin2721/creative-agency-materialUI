@@ -6,7 +6,7 @@ import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 function OurSpecialtyCard({ item, i }) {
     return (
         <Grid container direction={`${(i / 2 === 0.5) ? 'row-reverse' : 'row'}`}>
-            <Grid items xs={12} sm={12} md={6} sx={{
+            <Grid item xs={12} sm={12} md={6} sx={{
                 display: 'flex',
                 alignItems: 'center',
             }}>
@@ -21,7 +21,7 @@ function OurSpecialtyCard({ item, i }) {
                     </Button>
                 </Box>
             </Grid>
-            <Grid items xs={12} sm={12} md={6}>
+            <Grid item xs={12} sm={12} md={6}>
                 <img src={item?.image} alt="" style={{
                     width: '100%',
                 }} />

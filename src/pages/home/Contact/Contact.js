@@ -2,6 +2,8 @@ import { Button, FormControl, Grid, TextField, Typography } from '@mui/material'
 import { Box } from '@mui/system';
 import React from 'react'
 import SectionTitle from '../../../components/SectionTitle/SectionTitle';
+import { contactGridSx, contactTextFieldSx, contactTypographySx } from '../StyleHome/StyleHome';
+
 
 function Contact() {
     return (
@@ -10,24 +12,11 @@ function Contact() {
         }}>
 
             <SectionTitle title='Let us handle your project,' colored='professionally.' sx={{ pt: 6 }} />
-            <Typography sx={{
-                fontSize: '15px',
-                textAlign: 'center',
-
-            }}>
+            <Typography sx={contactTypographySx}>
                 With well written codes, we build amazing apps for all platforms, mobile and web apps in general.
             </Typography>
             <Grid container spacing={2}
-                sx={{
-                    minHeight: '70vh',
-                    borderRadius: '10px',
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    p: 5,
-                    mb: 8,
-                    mx: 'auto',
-                }}>
+                sx={contactGridSx}>
                 <Grid item xs={12} sm={12} md={6}>
                     <img src="https://i.ibb.co/fnnsqjN/4220713-removebg-preview.png" alt="" style={{
                         width: '100%',
@@ -41,19 +30,12 @@ function Contact() {
                         <TextField
                             id="outlined-multiline-flexible"
                             label="Email Address"
-                            sx={{
-                                width: '90%',
-                                backgroundColor: '#ffff',
-                            }}
+                            sx={contactTextFieldSx.TextFieldSx_1}
                         />
                         <TextField
                             id="outlined-multiline-flexible"
                             label="Address"
-                            sx={{
-                                width: '90%',
-                                mt: 2,
-                                backgroundColor: '#ffff',
-                            }}
+                            sx={contactTextFieldSx.TextFieldSx_2}
                         />
                         <TextField
                             id="standard-multiline-static"
@@ -61,13 +43,7 @@ function Contact() {
                             rows={4}
                             defaultValue="Your Message"
                             variant="standard"
-                            sx={{
-                                width: '90%',
-                                my: 2,
-                                backgroundColor: '#ffff',
-                                border: 'none',
-                                p: 2
-                            }}
+                            sx={contactTextFieldSx.TextFieldSx_3}
                         />
                         <Button sx={{ width: '20%', backgroundColor: 'primary.green' }}>SEND</Button>
                     </FormControl>

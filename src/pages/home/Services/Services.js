@@ -8,11 +8,11 @@ function Services() {
     return (
         <Box>
             <SectionTitle title={'Provide awesome'} colored={'Service'} />
-            
+
             <Grid container spacing={2}>
                 {
                     serviceData?.map((data, i) =>
-                        <Grid item xs={12} sm={6} md={4}>
+                        <Grid item key={i} xs={12} sm={6} md={4}>
                             <Service key={i} data={data} />
                         </Grid>)
                 }

@@ -5,35 +5,15 @@ import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
 import { OurTeamData } from './OurTeamData';
+import { ourTeamInnerBoxSx, ourTeamSecondSectionTitleSx } from '../StyleHome/StyleHome';
+
 
 function OurTeam() {
   return (
     <Box>
       <SectionTitle colored='OUR TEAM' sx={{ fontSize: '17px' }} />
-      <SectionTitle title='Trust the professionals' sx={{
-        fontSize: {
-          xs: '25px',
-          sm: '25px',
-          md: '34px',
-        },
-      }} />
-      <Box sx={{
-        width: {
-          xs: 'auto',
-          sm: 'auto',
-          md: 500,
-          lg: 800,
-        },
-        height: {
-          xs: 270,
-          sm: 270,
-          md: 350,
-          lg: 450,
-        },
-        overflowY: 'scroll',
-        overflowX: 'hidden',
-        mx: 'auto',
-      }}>
+      <SectionTitle title='Trust the professionals' sx={ourTeamSecondSectionTitleSx} />
+      <Box sx={ourTeamInnerBoxSx}>
         <ImageList variant="masonry" cols={3} gap={8}>
           {OurTeamData?.map((item, i) => (
             <ImageListItem key={i}>

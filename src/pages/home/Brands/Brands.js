@@ -1,6 +1,7 @@
 import React from 'react'
 import { Box } from '@mui/material'
 import { styled } from '@mui/system';
+import { BrandsWrapper } from '../StyleHome/StyleHome';
 
 const brands = [
     'https://i.ibb.co/27wHw8Y/image-5.png',
@@ -9,22 +10,6 @@ const brands = [
     'https://i.ibb.co/99gcp3b/image-8.png',
     'https://i.ibb.co/Rhk2VSh/image-9.png',
  ];
-
-const BrandsWrapper = styled(Box)(({theme}) => ({
-    marginBottom: '4rem',
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    '& > img' : {
-        height: '60px'
-    },
-    [theme.breakpoints.down('md')]: {
-        flexDirection: 'column',
-        '& > img' : {
-            marginBottom: '1rem',
-        }
-    }
-}))
 
 function Brands() {
   return (
