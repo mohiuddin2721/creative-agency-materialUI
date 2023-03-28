@@ -16,6 +16,7 @@ export const BrandingWrapper = styled(Box)(({ theme }) => ({
 
 // Brands component style
 export const BrandsWrapper = styled(Box)(({ theme }) => ({
+    cursor: 'pointer',
     marginBottom: '4rem',
     display: 'flex',
     justifyContent: 'space-between',
