@@ -6,9 +6,8 @@ import { serviceData } from './ServiceData';
 
 function Services() {
     return (
-        <Box>
+        <Box sx={{ my: 10 }}>
             <SectionTitle title={'Provide awesome'} colored={'Service'} />
-
             <Grid container spacing={2}>
                 {
                     serviceData?.map((data, i) =>

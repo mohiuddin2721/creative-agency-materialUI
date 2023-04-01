@@ -10,7 +10,7 @@ function OurSpecialtyCard({ item, i }) {
                 display: 'flex',
                 alignItems: 'center',
             }}>
-                <Box sx={{}}>
+                <Box>
                     <Typography sx={{ fontSize: '25px', fontWeight: '600' }}>{item?.title}</Typography>
                     <Typography>{item?.description}</Typography>
                     <Button variant='text' sx={{
